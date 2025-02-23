@@ -39,7 +39,7 @@
 
             const formData = new FormData(form);
             try {
-                await axios.post('http://localhost:1000/upload', formData, {
+                await axios.post('https://birding.onrender.com/upload', formData, {
                     headers: { 'Content-Type': 'multipart/form-data' },
                 });
                 form.reset();
@@ -52,7 +52,7 @@
         // Cargar alumnos desde el servidor
         async function cargarAlumnos() {
             try {
-                const res = await axios.get('http://localhost:1000/alumnos');
+                const res = await axios.get('https://birding.onrender.com/alumnos');
                 alumnosContainer.innerHTML = '';
 
                 res.data.forEach(alumno => {
@@ -61,7 +61,7 @@
 
                     col.innerHTML = `
                         <div class="card">
-                            <img src="http://localhost:1000${alumno.imagen}" class="card-img-top" alt="${alumno.nombre}">
+                            <img src="https://birding.onrender.com/${alumno.imagen}" class="card-img-top" alt="${alumno.nombre}">
                             <div class="card-body">
                                 <h5 class="card-title">${alumno.nombre}</h5>
                                 <p class="card-text">Grado: ${alumno.grado}</p>
