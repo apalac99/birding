@@ -1,0 +1,18 @@
+{
+    "name": "subir-imagenes-alumnos",
+    "version": "1.0.0",
+    "description": "Aplicación para subir y mostrar imágenes de alumnos",
+    "main": "app.js",
+    "scripts": {
+        "start": "node app.js"
+    },
+    "dependencies": {
+        "cors": "^2.8.5",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "mongoose": "^8.10.1",
+        "multer": "^1.4.5-lts.1"
+    },
+    "author": "",
+    "license": "ISC"
+}
